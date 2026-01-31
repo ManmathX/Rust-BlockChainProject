@@ -1,0 +1,211 @@
+.blockchain-viewer {
+    width: 100%;
+}
+
+.blockchain-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.blockchain-header h2 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.blockchain-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.blockchain-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.blocks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.block-card {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.block-card:hover {
+    border-color: var(--border-color-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.block-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.block-icon {
+    font-size: 2rem;
+}
+
+.block-title h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.block-time {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.block-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.info-value.hash {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--primary-light);
+    word-break: break-all;
+}
+
+.block-transactions {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+}
+
+.block-transactions h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.transaction-item {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background: var(--bg-tertiary);
+}
+
+.transaction-item:last-child {
+    margin-bottom: 0;
+}
+
+.tx-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tx-row:last-child {
+    border-bottom: none;
+}
+
+.tx-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.tx-value {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+.tx-value.amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tx-value.mono {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+}
+
+.block-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--spacing-md) 0;
+    position: relative;
+}
+
+.connector-line {
+    width: 2px;
+    height: 30px;
+    background: linear-gradient(180deg, var(--primary), transparent);
+}
+
+.connector-arrow {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-top: -10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .blockchain-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .block-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .block-info {
+        grid-template-columns: 1fr;
+    }
+
+    .tx-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .tx-value {
+        text-align: left;
+    }
+}
