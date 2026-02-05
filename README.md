@@ -2,8 +2,6 @@
 
 A decentralized e-commerce platform built with **React** and **Rust**, featuring blockchain-based transaction processing with proof-of-work mining, cryptographic verification, and a modern glassmorphic UI.
 
-![Demo Recording](screenshots/demo-recording.webp)
-
 ## ✨ Features
 
 ### 🔐 Blockchain Technology
